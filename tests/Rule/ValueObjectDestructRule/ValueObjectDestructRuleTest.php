@@ -31,7 +31,7 @@ final class ValueObjectDestructRuleTest extends RuleTestCase
         yield [__DIR__ . '/Fixture/SkipUsedJustOne.php', []];
     }
 
-    protected function getRule(): \Reveal\PHPStanRules\Rule\ValueObjectDestructRule
+    protected function getRule(): Rule
     {
         $testRuleFactory = new TestRuleFactory();
         return $testRuleFactory->getServiceFromConfig(__DIR__ . '/config/configured_rule.neon', ValueObjectDestructRule::class);
