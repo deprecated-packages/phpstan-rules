@@ -6,10 +6,18 @@ namespace Reveal\PHPStanRules\Tests\Rule\ValueObjectDestructRule\Source;
 
 final class SomeValueObject
 {
-    public function __construct(
-        private string $name,
-        private string $surname
-    ) {
+    /**
+     * @var string
+     */
+    private $name;
+    /**
+     * @var string
+     */
+    private $surname;
+    public function __construct(string $name, string $surname)
+    {
+        $this->name = $name;
+        $this->surname = $surname;
     }
 
     public function getName(): string
