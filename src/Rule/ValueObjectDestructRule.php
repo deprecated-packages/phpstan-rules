@@ -32,11 +32,15 @@ final class ValueObjectDestructRule implements Rule, DocumentedRuleInterface
     /**
      * @var array<string, string[]>
      */
-    private array $cachedClassPublicMethodNames = [];
+    private $cachedClassPublicMethodNames = [];
+    /**
+     * @var \PHPStan\Reflection\ReflectionProvider
+     */
+    private $reflectionProvider;
 
-    public function __construct(
-        private ReflectionProvider $reflectionProvider
-    ) {
+    public function __construct(ReflectionProvider $reflectionProvider)
+    {
+        $this->reflectionProvider = $reflectionProvider;
     }
 
     public function getNodeType(): string

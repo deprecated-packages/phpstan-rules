@@ -4,7 +4,7 @@
     "description": "Rules to reveal better patterns in your code",
     "license": "MIT",
     "require": {
-        "php": ">=8.1",
+        "php": ">=7.1",
         "phpstan/phpstan": "^1.4",
         "symplify/rule-doc-generator-contracts": "^10.0"
     },
